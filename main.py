@@ -1,39 +1,3 @@
-# import random
-# destinations_list = ["Milwaukee","Madison","Wisconsin Dells","Lake Geneva","Oconomowoc"]
-# restaurants_list = ["Kopps","Culvers","Balistreri's", "Geneva ChopHouse", 
-# "The Baker House", "OakFire", "The Keg & Patio", "River Walk Pup", "Ishnala Supper Club",
-# "AJ's Pub", "Mantra Indian Bistro" ]
-# transportaion_list = ["Rental Car", "Uber", "Personal Vechicle", "Bicyle", "E-Scooter","Walking"]
-# entertainment_list = ["River Cruise", "Kayaking","Fishing","Brewer's Game", "Bucks Game", "Bar Hopping", "Water Park", 
-# "National Parks", "Dell's Main Street", "Badger's Game"]
-
-# destination = random.choice(destinations_list)
-# restaurant = random.choice(restaurants_list)
-# transportaion = random.choice(transportaion_list)
-# entertainment = random.choice(entertainment_list)
-# complete = ""
-
-# while complete != "Yes":
-#     print()
-#     print("The follow is your potential Day Trip!")
-#     print(f"Destination:   {destination}")
-#     print(f"Restaurant:    {restaurant}")
-#     print(f"Transportaion: {transportaion}")
-#     print(f"Entertainment: {entertainment}")
-#     print()
-#     complete = input("Are you happy with this trip, and would like to complete the reservation? 'Yes' or 'No'?  ")
-#     if complete != "Yes":
-#         change = input("Which would you like to change? 'Destination'  'Restaurant'  'Transportation' or 'Entertainment'   ")
-#         if change == "Destination":
-#             destination = random.choice(destinations_list)
-#         elif change == "Restaurant":
-#             restaurant = random.choice(restaurants_list)
-#         elif change == "Transportaion":
-#             transportaion = random.choice(transportaion_list)   
-#         elif change == "Entertainment":
-#              entertainment = random.choice(entertainment_list)
-#     else:
-#         print("Thank you for selcting this day trip! Goodbye ")
 
 import random
 
@@ -77,10 +41,8 @@ def generate_trip_options():
 
 def generate_random_trip(options_list):
     result_list =[]
-    result_list.append(random.choice(options_list[0]))
-    result_list.append(random.choice(options_list[1]))
-    result_list.append(random.choice(options_list[2]))
-    result_list.append(random.choice(options_list[3]))
+    for num in range(4):
+        result_list.append(random.choice(options_list[num]))
     return result_list
 
 def print_full_trip(trip_list):
