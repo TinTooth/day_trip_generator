@@ -37,7 +37,7 @@ while complete != "Yes":
              entertainment = random_selector(entertainment_list)
     else:
         print("Thank you for selcting this day trip! Goodbye ")
-        
-                 
+
+
 
 
