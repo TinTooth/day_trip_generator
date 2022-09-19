@@ -7,7 +7,7 @@ def run_list_option_randomizer():
         current_list = generate_random_list(options_list)
         print_full_randomized_list(current_list)
         finalize_randomized_list(current_list)
-        if input("Do you want to randomize something else? Y / N:  ") == "N":
+        if input("Do you want to randomize something another set of categories/options? Y / N:  ") == "N":
             print("Good-Bye")
             print()
             break
