@@ -1,4 +1,3 @@
-
 import random
 
 def run_day_trip_generator():
@@ -21,6 +20,9 @@ def finalize_trip(current_trip,options_list):
 
 def change_option(current_trip, options_list):
     change = input("Which would you like to change? 'Destination'  'Restaurant'  'Transportation' or 'Entertainment'   ")
+    options_categories = ["Destination", "Restaurant", "Transportation","Entertainment"]
+    while change not in options_categories:
+        change = input("Sorry, please choose one of the following options:  'Destination'  'Restaurant'  'Transportation' or 'Entertainment'    ")
     if change == "Destination":
         current_trip[0] = random.choice(options_list[0])
     elif change == "Restaurant":
